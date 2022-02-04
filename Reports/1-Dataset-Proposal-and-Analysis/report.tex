@@ -20,8 +20,8 @@
 \title{11-777 Report 1: Dataset Proposal and Analysis}
 
 \author{
-  First Last 1\thanks{\hspace{4pt}Everyone Contributed Equally -- Alphabetical order} \hspace{2em} First Last 2$^*$ \hspace{2em} First Last 3$^*$ \hspace{2em} First Last 4$^*$ \\
-  \texttt{\{ID1, ID2, ID3, ID4\}@andrew.cmu.edu}
+  Hao Wu\thanks{\hspace{4pt}Everyone Contributed Equally -- Alphabetical order} \hspace{2em} Jiayi Shen$^*$ \hspace{2em} Yanlin Feng$^*$ \hspace{2em} Yinghuan Zhang$^*$ \hspace{2em} Yuwei Wu$^*$\\
+  \texttt{\{haowu3, jiayis2, yanlinf, yinghuan, yuweiwu\}@andrew.cmu.edu}
   }
 
 \date{}
@@ -32,10 +32,15 @@
 \section{Problem Definition and Dataset Choice (1 page)}
 If you are choosing a dataset not listed on the course website, this section should be long enough to justify that you are qualified for your choice.  This may mean a second page.
 
+Dataset: TextVQA
+
+
 \subsection{What phenomena or task does this dataset help address?}
+This dataset helps address the task of visual question answering that requires reading and reasoning over the text in images, which is commonly needed by the visually impaired.
 \subsection{What about this task is fundamentally multimodal?}
+This task involves visual and text modalities. Solving this task requires the model to leverage both visual and text content. 
 \subsection{Hypothesis}
-We believe there are three places cross-modal information can be used or imporoved
+We believe there are three places cross-modal information can be used or improved
   \begin{enumerate}
     \item ...
     \item ...
@@ -44,14 +49,25 @@ We believe there are three places cross-modal information can be used or imporov
 \subsection{Expertise}
 We have the following expertise in the underlying modalities required by this task:
   \begin{enumerate}
-      \item Team member 1: Research paper in CV, ...
-      \item Team member 2: Took NLP in Fall 2021, ...
-      \item ...
+      \item Hao Wu: Took CV in Fall 2021, Experience in 3D vision
+      \item Jiayi Shen: 
+      \item Yanlin Feng: 
+      \item Yinghuan Zhang:
+      \item Yuwei Wu:
   \end{enumerate}
 
 \clearpage
 \section{Dataset Analysis (1 page)}
 \subsection{Dataset properties} (GBs, framerate, physical hardware platform, ...)
+
+TextVQA v0.5.1 contains 45,336 questions based on 28,408 images. 
+\begin{enumerate}
+	\item Training set contains 34,602 questions (103 MB) based on 21,953 images (6.6 GB) from OpenImages' training set. 
+	\item Validation set contains 5,000 questions (16 MB) based on 3,166 images from OpenImages' training set. 
+	\item Test set contains 5,734 questions (13 MB) based on 3,289 images (926 MB) from OpenImages' test set.
+
+\end{enumerate}
+
 \subsection{Compute Requirements}
   \begin{enumerate}
     \item Files (can fit in RAM?)
@@ -68,13 +84,27 @@ We have the following expertise in the underlying modalities required by this ta
 \subsection{Baselines} 
 Four papers that have worked on this dataset
 
+\begin{enumerate}
+	\item \cite{Singh_2019_CVPR} is the original paper that introduced TextVQA dataset and the Look, Read, Reason \& Answer (LoRRA) architecture
+	\item \cite{hu2020iterative} has proposed a model for the TextVQA task based on a multimodal transformer architecture accompanied by a rich representation for text in images
+	\item \cite{kant2020spatially} has proposed a novel spatially aware self-attention layer such that each visual entity only looks at neighboring entities defined by a spatial graph. Further, each head in the multi-head self-attention layer focuses on a different subset of relations
+\end{enumerate}
+
+
+
+
 \clearpage
 \section{Team member contributions}
-\paragraph{Member 1} contributed ...
+\paragraph{Hao Wu} contributed ...
 
-\paragraph{Member 2} contributed ...
+\paragraph{Jiayi Shen} contributed ...
 
-\paragraph{...} contributed ...
+\paragraph{Yanlin Feng} contributed ...
+
+\paragraph{Yinghuan Zhang} contributed ...
+
+\paragraph{Yuwei Wu} contributed ...
+
 
 \clearpage
 % Please use 
