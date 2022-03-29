@@ -21,6 +21,9 @@ class TextVQAHotpotDataset(TextVQADataset):
         ## set mode by checking feature path (rosetta/msocr)
         self.msocr = 'ocr_en_frcn' not in config.features.train[0]
         if self.msocr: assert ('fc6' not in config.features.train[0])
+        self.do_object_filter = config.get('do_object_filter', True)
+        if not self.do_object_filter:
+            print('*'*20+'WARNING: object filter is disabled'+'*'*20)
 
     def preprocess_sample_info(self, sample_info):
         return sample_info  # Do nothing
@@ -139,8 +142,10 @@ class TextVQAHotpotDataset(TextVQADataset):
         object_tokens = sample['image_info_0']['object_tokens']
         # Get FastText embeddings for object label tokens
         object_context = self.context_processor({"tokens": object_tokens})
-        indices = [i for i, x in enumerate(object_context["tokens"]) if x != "background"]
-
+        if self.do_object_filter:
+            indices = [i for i, x in enumerate(object_context["tokens"]) if x != "background"]
+        else:
+            indices = [i for i in range(len(object_context["tokens"]))]
         object_tokens = [object_tokens[i] for i in indices]
         object_context = self.context_processor({"tokens": object_tokens})
         # object bounding box information
