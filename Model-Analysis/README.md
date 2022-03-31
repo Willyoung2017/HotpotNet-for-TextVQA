@@ -18,7 +18,8 @@ If you instead use command-line tools, please describe how to run your code, and
 
 `datainfo_collector.py`  collets data information from `_info.npy` file
 
-* `python datainfor_collector.py -info [path_to_your_info.py_file_directory]`
+* INFO_DIRECTORY should include two subfolders `train/` and `test/`, where you put the `_info.npy` files
+* `python datainfor_collector.py -info [path_to_INFO_DIRECTORY]`
 * The output will be two `.txt` files
   * One contains all the `question_id` that meets your requirement.
   * The other one show the `question` with the `question_id`
