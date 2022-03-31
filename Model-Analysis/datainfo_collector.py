@@ -16,8 +16,16 @@ import matplotlib.colors as mcolors
 from PIL import Image
 
 def main():
-	dataset_path = "./data/textvqa/"
-	datainfo_path = "./data/"
+	dataset_path = "../Data/textvqa/"
+	
+	parser = argparse.ArgumentParser()
+
+	parser.add_argument('--DATAINFOR_PATH', '-info', help='Data info path')
+	args = parser.parse_args()
+	if (args.DATAINFOR_PATH==None):
+		datainfo_path = "../../data/"
+	else:
+		datainfo_path = args.DATAINFOR_PATH
 
 	trainset, valset, testset = read_dataset(dataset_path)
 	obj_vocab = read_obj_vocab(datainfo_path)
@@ -33,41 +41,33 @@ def read_obj_vocab(datainfo_root):
 	return obj_vocab
 
 
-def colors_list(NUM_COLORS):
-    def get_cmap(N):
-        color_norm = mcolors.Normalize(0, N)
-        return cmx.ScalarMappable(color_norm, 'hsv').to_rgba
-    cmap = get_cmap(NUM_COLORS)
-    colors = [cmap(float(i)) for i in range(NUM_COLORS)]
-    return colors
-
-
-def visualize_w_bb(img_path, info, obj_vocab):
+def visualize_w_bb(img_path, info, obj_vocab, showbg=True):
 	img = cv2.imread(img_path)
 	cv2.imwrite("tmp_orig.png", img)
 	box_color = (255,0,255)
 	bg_color = (255,255,0)
 	addbg_color = (0,255,255)
 	
-	showbg = True
 	objset = list(set(info['objects']))
-	print("set of objects: ", objset)
+	# print("set of objects: ", objset)
 	colors = colors_list(len(objset))
+
 	##### visualize #####
 	for obj_idx in range(100):
 		obj = info['objects'][obj_idx]
 		box = info['bbox'][obj_idx]
 		label = obj_vocab[obj]
-		# print("obj class idx: ", obj, "label: ", label)
+		print("obj class idx: ", obj, "label: ", label)
 
-		# if (label == "background"):
-		# 	color = bg_color
-		# elif (label == "BACKGROUND"):
-		# 	color = addbg_color
-		# else:
-		# 	color = box_color
+		if (label == "background"):
+			color = bg_color
+		elif (label == "BACKGROUND"):
+			color = addbg_color
+			if (not showbg):
+				continue
+		else:
+			color = box_color
 
-		color = colors[objset.index(obj)]
 		print("obj color index: ", objset.index(obj))
 		print("color: ", color)
 
@@ -109,24 +109,23 @@ def filter_obj_questions(dataset, datainfo_root, dataset_path, obj_vocab):
 
 
 	bgindex = obj_vocab.index("background")
-
+	downloaded = 0
 	##### check each data sample #####
 	for idx in range(len(dataset)):
-	# for idx in range(2):
 		datasample = dataset.iloc[idx]
 		imgsample = datasample['image_id']
 		
 		info_path = datainfo_root + data_sourceset + "/" + imgsample + "_info.npy"
 		if os.path.exists(info_path):
 			info = np.load(info_path, encoding = "latin1", allow_pickle=True).item()
+			downloaded += 1
 
 			img_path = dataset_path + data_sourceset + "_images/" + imgsample + ".jpg"
 			# visualize_w_bb(img_path, info, obj_vocab)
 
 			objects = info['objects']
-			if (bgindex in objects):
-				visualize_w_bb(img_path, info, obj_vocab)
-				# print("yes")
+			# if (bgindex in objects):
+			# 	visualize_w_bb(img_path, info, obj_vocab)
 
 			vocabs = set([obj_vocab[idx].lower() for idx in objects])
 			for v in vocabs:
@@ -136,22 +135,23 @@ def filter_obj_questions(dataset, datainfo_root, dataset_path, obj_vocab):
 					subset_num += 1
 					break
 
+	print("Downloaded questions: ", downloaded)
 	print("There are ", subset_num, " questions containing object vocabs.")
-	# subset_str = subset_str[:-1]
-	# subset_index_str = subset_index_str[:-1]
+	subset_str = subset_str[:-1]
+	subset_index_str = subset_index_str[:-1]
 
-	# with open(dataset['set_name'][0]+"_obj_related_question.txt", 'w') as f:
-	# 	f.write(subset_str)
-	# f.close()
+	with open("subsets/"+dataset['set_name'][0]+"_obj_related_question.txt", 'w') as f:
+		f.write(subset_str)
+	f.close()
 
-	# subset_str_text = ""
-	# for i in subset_index_str.split(","):
-	# 	subset_str_text += str(dataset.iloc[int(i)]['question_id']) + "\t" + str(dataset.iloc[int(i)]['question']) + "\n"
+	subset_str_text = ""
+	for i in subset_index_str.split(","):
+		subset_str_text += str(dataset.iloc[int(i)]['question_id']) + "\t" + str(dataset.iloc[int(i)]['question']) + "\n"
 	
-	# # print(subset_str_text)
-	# with open(dataset['set_name'][0]+"_obj_related_question_text.txt", 'w') as f:
-	# 	f.write(subset_str_text)
-	# f.close()
+	# print(subset_str_text)
+	with open("subsets/"+dataset['set_name'][0]+"_obj_related_question_text.txt", 'w') as f:
+		f.write(subset_str_text)
+	f.close()
 
 
 def read_dataset(dataset_path):
