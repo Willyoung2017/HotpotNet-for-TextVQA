@@ -10,7 +10,7 @@ import argparse
 
 
 def main():
-	dataset_path = "./data/textvqa/"
+	dataset_path = "../Data/textvqa/"
 	parser = argparse.ArgumentParser()
 
 	parser.add_argument('--KEYWORD_LIST', '-k', help='Keywords list')
@@ -25,14 +25,14 @@ def main():
 def save_subset(subset_source, subsetname, subset):
 	subset_str = "".join([str(x)+"," for x in set(subset['question_id'])])
 	subset_str = subset_str[:-1]
-	with open(subset_source+"_subset_"+subsetname+".txt", 'w') as f:
+	with open("subsets/"+subset_source+"_"+subsetname+".txt", 'w') as f:
 		f.write(subset_str)
 	f.close()
 
 	subset_str_text = ""
 	for i in range(len(subset)):
 		subset_str_text += str(subset.iloc[i]['question_id']) + "\t" + str(subset.iloc[i]['question'] +"\n")
-	with open(subset_source+"_subset_"+subsetname+"_text.txt", 'w') as f:
+	with open("subsets/"+subset_source+"_"+subsetname+"_text.txt", 'w') as f:
 		f.write(subset_str_text)
 	f.close()
 
