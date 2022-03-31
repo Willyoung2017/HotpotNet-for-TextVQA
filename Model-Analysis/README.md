@@ -6,6 +6,10 @@ If you instead use command-line tools, please describe how to run your code, and
 
 
 
+All these utils are applied to `val` dataset right now.
+
+
+
 `dataset_splitter.py` generates subset where there are certain words in questions.
 
 - Generate your own *keywordlist.txt*, put it in the same directory with your splitter
@@ -23,3 +27,10 @@ If you instead use command-line tools, please describe how to run your code, and
 * The output will be two `.txt` files
   * One contains all the `question_id` that meets your requirement.
   * The other one show the `question` with the `question_id`
+
+
+
+`read_gradebook.py` generates gradebook for your subset
+
+* One argument `-s [your_subset_names]` is required. You can generate several gradebook for subsets, you should use exactly subset name from `subsets` folder and split them with comma, for example, for generating gradebooks for subset `not require reading` and `require reading`, you put in argument `-s "not_require_reading,require_reading"`.
+* The output will be `.csv` files, placed under `gradebooks` folder.
