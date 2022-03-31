@@ -20,16 +20,17 @@ def main():
 	
 	parser = argparse.ArgumentParser()
 
-	parser.add_argument('--DATAINFOR_PATH', '-info', help='Data info path')
+	parser.add_argument('--DATAINFO_PATH', '-info',
+						help='Data info path',
+						default="../../data/")
+	parser.add_argument('--OBJ_VOCAB_PATH', '-vocab',
+						help='Object vocab file path',
+						default="../../data/")
 	args = parser.parse_args()
-	if (args.DATAINFOR_PATH==None):
-		datainfo_path = "../../data/"
-	else:
-		datainfo_path = args.DATAINFOR_PATH
 
 	trainset, valset, testset = read_dataset(dataset_path)
-	obj_vocab = read_obj_vocab(datainfo_path)
-	filter_obj_questions(valset, datainfo_path, dataset_path, obj_vocab)
+	obj_vocab = read_obj_vocab(args.OBJ_VOCAB_PATH)
+	filter_obj_questions(valset, args.DATAINFO_PATH, dataset_path, obj_vocab)
 
 def read_obj_vocab(datainfo_root):
 	with open(datainfo_root + "objects_vocab.txt", 'r') as f:
