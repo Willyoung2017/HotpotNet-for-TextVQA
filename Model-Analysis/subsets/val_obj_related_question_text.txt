@@ -1,0 +1,654 @@
+34636	what is the screen name being displayed?
+34637	what does the picture say the other ride is?
+34688	what does his jacket say?
+34689	what brand is in white letters with a red background?
+34700	what time is displayed on the clock?
+34709	what is written on the bag?
+34732	what code is on the side of the airplane?
+34733	what is the first word of the phrase right below the cockpit?
+34738	what word is printed under "interior design" on the book in the middle?
+34756	what is one of the largest words on the collage?
+34762	is that their lunchbox favorite?
+34763	what brand is the lunchbox?
+34773	what state is this license plate from?
+34780	what is the name of the second bottle of wine?
+34788	does her shirt say jesus on it?
+34789	does her shirt say "jesus hates you!"?
+34791	what is title of the orange book?
+34792	what player is preparing to kick the ball?
+34798	what is the licence plate of the car?
+34799	what kind of establishment is in the background next to the red and white truck?
+34805	what is the 4 digit number written at the bottom of the black book?
+34806	what time does the top clock show?
+34810	what does the canister say?
+34817	what airline is the plane from?
+34818	what type of plane is it?
+34819	what time does the clock say?
+34820	what letter is under the clock?
+34823	what clothing brand sign is hanging above the pedestrians heads?
+34824	what brand is on the white bag?
+34829	what is the building made of?
+34832	what is the team name on this jersey?
+34838	what's the number written on the back of this player's shirt?
+34845	what is the brand of the tallest bottle?
+34849	what number is this runner?
+34866	what brand of cellphone is this?
+34867	was this picture sent?
+34879	what word is on the box?
+34883	what brand is this laptop?
+34884	what kind of coins are printed in gray area of the screen?
+34889	what is the make of cell phone?
+34893	what does the sign say?
+34896	two ladders seen?
+34913	what is the name of this bottle of wine?
+34914	what brand of laptop is the silver one?
+34915	what are the numbers on the computer screen?
+34917	what does it say at the top right of the bus in front?
+34920	what business is shown on the right?
+34944	what team does this player play on?
+34945	what grocery store sponsors this team?
+34948	what is written beneath the star on the right arm of the sweater?
+34953	what type of post is the mobile phone user beginning to make?
+34954	what address is on the bottom of the screen?
+34959	what street sign is in the background?
+34967	what is the name of the company that makes the t-shirt?
+34968	what are the initials of the company with the rooster for a logo?
+34989	is this a lego box?
+34997	what`s the number of the lincense plate?
+35015	what is the name of the university on screen?
+35032	what is the name on the bottle 2nd from the left?
+35052	what word is shown on the top of the left most screen?
+35060	what does the board say?
+35069	what number and letter are found under the green icon?
+35072	what does the writing on the doors signify?
+35073	what is written on the door of the toilet?
+35082	what does the red button do?
+35089	what team are the players in red a part of?
+35090	what letter is on the red hat?
+35096	who is the author of these two books?
+35103	who's club is mentioned in the blue picture?
+35104	who is the artist mentioned in both pictures?
+35113	what time does the clock say?
+35114	what year was this clock made?
+35117	who is sponsored on the baseball field?
+35143	what is the name on the book?
+35144	what brand is in the middle?
+35146	what word is written after "dream" on the boat??
+35171	what kind of shops are in the background?
+35172	where is the cop car from?
+35191	how many ounces are in each of the bottles?
+35207	what is the name of the city on the blue banner?
+35229	what is the brand of the camera lens?
+35234	what is the number at the bottom right corner?
+35246	what beer is the yellow sign advertising?
+35254	what kind of traffic sign is this?
+35262	what does the middle circular button say, in between the four arrow buttons?
+35263	does the remote have an ok button?
+35270	what does it say on the sign?
+35276	what is the player number of the player touching base?
+35277	what is the number in black on the yellow shirt at the very top?
+35281	what is the bus route number?
+35282	what number is on the bus?
+35283	this sign is asking you to turn off what vehicle function?
+35284	does the sign thank you?
+35285	what country is on the man's shoulder sleeve?
+35305	what time does the clock read?
+35306	what kind of clock is shown?
+35317	is there a freeze button?
+35325	what is the brand of beer printed on the glass?
+35326	what are the 3 green letters in the background?
+35327	what is the letter number combination on the first boat?
+35333	what is the date of the photo?
+35337	what country is the all white airplane from?
+35338	what is advertised on the billboard?
+35339	what phone number is listed on the bottom of the lower billboard?
+35343	what is the number on the sign?
+35347	what type of hard drive does the computer have?
+35348	what os does this computer have?
+35352	who are the people whose names are written on the glasses?
+35359	are both these phone android bases?
+35377	what is the word written in the bottom of the box?
+35385	what numbers are written on the green sign?
+35414	what brand is the bottle behind the contact solution?
+35418	what is the car number for this vehicle?
+35419	who is the car for?
+35424	what is the brand of this laptop?
+35428	whats 3 letters are seen under the right mans arm?
+35429	what is this bus route's number?
+35430	where is this bus headed to?
+35453	what are on the mans hat?
+35466	what percentage off does the yellow sign say?
+35483	what kind of phone is on the right?
+35492	what is the current time, going by what's on the clock?
+35495	who made the clock?
+35504	what team name is the little guy wearing?
+35508	what number is printed in the yellow shape on the can?
+35536	what are two categories on the board?
+35545	who is seated at this table?
+35576	what is the name of the plane?
+35582	what is the number of the player in the middle?
+35583	who is the author of the book at the top of the stack?
+35597	what is the name of the black book to the far right?
+35601	what venue is this?
+35609	what brandy of keyboard is this?
+35621	what team does the play for?
+35622	what are the initials on the hat?
+35625	what does it say on the wall above the players?
+35626	what  number is on the back of the man in red shoe's white jersey?
+35631	what is in the white bag?
+35632	what does the red shirt say?
+35643	what airline is this plane from?
+35644	what language is on the plane?
+35655	what does the boy in green's shirt say?
+35663	how many hours per day is this business open?
+35664	what is the company being advertised on the billboard?
+35680	what is the train number?
+35701	who wrote this book?
+35709	what does the sign say next to the traffic light?
+35710	what is the number near the rear of the white car?
+35712	what is the name of the album?
+35716	what does this road sign mean?
+35717	who's the author of this book?
+35721	what state is featured on the white tank tops?
+35731	who manufactured the laptop used here?
+35737	what team's jersey is that?
+35738	what is the team name on the jersey?
+35749	what menu is on the top of the screen?
+35753	what number is on the guy's back?
+35759	what's the phone number on the sign?
+35760	what number is the batter?
+35761	what color is his jersey?
+35763	what team do the players in blue jerseys play for?
+35764	what number can you see on the hitters jersey?
+35806	who is the author of this book?
+35814	book on right is "son of a" what?
+35817	what is the brand of phone being shown?
+35818	what time is on the phone?
+35825	what brand is this watch?
+35873	what is the name of the wine with the dog on the label?
+35874	what number is the player on the far right?
+35875	what number is on the man in blue who has his arm raised?
+35878	what area of the country does this plane most likely connect?
+35893	what word is shown on the street?
+35894	what is the bus route number?
+35914	what is the first word on each of the white labels?
+35920	what jack daniels version is this bottle?
+35930	where is the bus going to?
+35931	what number is the bus?
+35937	what brand is the monitor?
+35952	what kind of phone does the subject have?
+35953	what language is on the screen?
+35963	what is the first letter on the left on the wall?
+35974	what soes it say in red letters on the trash cans?
+35980	what is the license plate of the van?
+35983	what is the text on the black part of the label?
+35984	how many ounces are in the bottle?
+35985	what type of laptop is this?
+35992	what letter is visible on the tail with the blue background?
+35998	what does the license plate say?
+36006	what number is on the man's shirt?
+36025	is this the first cell phone?
+36043	what is the bus number?
+36044	what years are displayed on the top?
+36045	what is the name of the first city listed?
+36048	what postbox number is it?
+36049	what color is the postbox number?
+36050	how many cups is the measuring cup?
+36055	what is the number on the player on the right?
+36089	what is the name of the the brewery's bottle?
+36095	where is the mountain house?
+36096	what state is this house in?
+36099	what is this shirt an advertisement for?
+36101	what is written below stop?
+36102	what does the sign say?
+36111	where does the beer come from according to the text on the glass?
+36129	what phone service is this?
+36130	how much is the phone?
+36141	what is a letter on the keyboard?
+36143	what text is displayed on the baseball bat?
+36148	on the table, near the bottom right, there is a piece of paper with "don't forget a god damn". what is the last word written at the bottom of that piece of paper?
+36149	what does the white paper on top of the blue paper on the left say?
+36165	what is the name of the house boat?
+36188	what is the phone number on the advertising banner?
+36189	what is the number to call for seasons of fun?
+36192	what animated film is being shown at the movie show?
+36193	what movie is #1?
+36199	what is the first word at the top of the right building?
+36214	what number is mentioned on the car?
+36219	how much does this book cost?
+36220	how much is the book?
+36238	what is the book on the right called?
+36239	whats the title of the pink book furthest to the left?
+36242	what is the name on the bottle?
+36255	what is the call number of the far right book?
+36272	what is the brand of toy to the side of the woman?
+36322	what is the author's last name on the book?
+36334	what number are the players?
+36338	what kind of stop is this?
+36368	what number is on the furthest right key?
+36384	what train is that?
+36385	which bus line is that?
+36415	what is the number on the baseball jersey?
+36416	what does his shirt say above the number?
+36424	what is the brand of the laptop?
+36425	what is written on one of the keys at the bottom left?
+36428	what is the age range listed on the toy box at the bottom?
+36431	what brand of clock is this?
+36435	what type of animals are in the box?
+36450	can we enter that road to the right?
+36452	how many players can you be able to see?
+36454	what number is shown on the shirt?
+36455	what is #29's last name?
+36458	what brand of laptop is shown?
+36483	how many wheels does this van have?
+36487	what is the red books title?
+36503	what number is on the front of the train?
+36510	what is name on the floor?
+36516	what number is on the mans shirt?
+36519	what type of service is the truck for?
+36536	what does the sign say above the wheelchair symbol?
+36561	what number is on the player throwing the ball?
+36562	what is the players last name?
+36569	what year was this wine bottled?
+36575	what is the name on the formost bottle?
+36576	what is the name of the bottle on the right?
+36610	what two numbers are shown on the top of the ruler?
+36616	what is inside of this bottle?
+36632	what kind of drink is in the can?
+36643	how many traffic police are in the picture?
+36649	what brand is the bottle with the black and green label?
+36651	what jersey number does holland wear?
+36652	what is the name of the player?
+36653	what time does the lg phone display?
+36654	what brand of phone is on the left?
+36670	how many ways is the stop?
+36671	what does the sign say?
+36674	what is this womans number in the race?
+36675	what word is written in white on the blue background?
+36677	what time is on this phone?
+36686	what time is this watch set for?
+36687	what company makes this watch?
+36690	what type of bus is this?
+36696	what is the function of the last key on the bottom right?
+36697	what is the function of the last key on the bottom left?
+36702	what does the key on the bottom right corner of the keyboard say?
+36703	what are the the first buttons on the top of the keyboard displayed?
+36704	what is the name on the box?
+36719	what brand is shown on these bottles?
+36722	what is the name of the bus company?
+36723	are the words on the crate written in english?
+36726	how many miles on the walking sign?
+36741	what brand of laptop is this?
+36742	what time is shown on the laptop?
+36760	what kind of paper?
+36796	this laptop is powered by what company?
+36797	what does the first key to the right of the space bar say?
+36807	what brand of phone is this?
+36813	what camera brand is shown on the strap of the man on the left?
+36817	what time is it according to this radio?
+36826	what team are we rooting for?
+36827	what is the number of the player furthest right?
+36855	what word is written in white at the bottom of the label?
+36857	what company logo is printed on the top right?
+36863	what is written on the red background?
+36871	are there any directions on that sign?
+36876	what brand of phone is she holding?
+36877	what word is written on the collar of the jacket?
+36878	what number is on the piece of paper?
+36890	what is the paper saying?
+36892	what is the website link on the side of the train?
+36898	what is the word on the top of this monitor?
+36912	what is the cross street?
+36913	what does the red sign on the right say?
+36918	what is the label on the far right in the front?
+36919	what is the brand of this beer?
+36920	what kind of beer is this?
+36926	what number is the catcher?
+36927	what number is the pitcher?
+36942	what is the building number?
+36945	what is the first sign in white saying is ahead?
+36954	is there a player with a 6 number?
+36984	where is the motorcycle from?
+36989	what is the top most numbers?
+36991	which website is loaded on the phone?
+37007	who is the sponsor of this game who uses flag banners?
+37012	what is one of the numbers on the van's front license plate?
+37014	what brand of soda is written in the background?
+37019	what does it tell you to do before october first on the sign?
+37020	what word is on the red sign?
+37034	when does this new series start, according to the sign?
+37049	what type of wood marketplace is this?
+37066	what is the brand of organic chocolate in the black box?
+37067	what is the brand of the chocolate in the red box?
+37082	what state is shown on the black label on the neck of the bottle?
+37092	what number is on the bus?
+37098	what is the name of the road on the exit?
+37105	what are numbers on this remote?
+37106	what make is this remote?
+37110	what company name is on the white boxes?
+37153	which airline owns this plane?
+37190	what is the first word on the bottom cardboard box?
+37193	what are the initials on the top of the dark bottle?
+37197	what type of sign is this?
+37198	how many sides of this intersection have a stop sign?
+37202	what is the train number?
+37209	is there hot sauce in the bottle ?
+37210	what kind of smoothie is in the bottle?
+37214	what kind of motherboard is in the box?
+37217	how many fluid ounces is in each bottle?
+37237	what is the word in purple letters on the wall?
+37240	do the boxes in the back say these are metal?
+37257	what sponsor is to the right of the players?
+37261	what is the first word on the sign?
+37276	what brand of cell phone is that?
+37289	what does the bottom sign represent?
+37290	what does the red sign mean?
+37299	is there a bridgestone sign up there?
+37300	what button has an up arrow beside it?
+37310	what does the sign say?
+37312	what country is this plane from?
+37313	what is the website name in the lower left hand corner of this ?
+37323	what does the box say on the bottom?
+37324	what is the date printed on the box?
+37371	what brand of phone is that?
+37389	what brand is on the bottle?
+37398	what company owns this bus?
+37399	what is the bus number?
+37404	what brand is on the box?
+37413	what number is the bus?
+37422	what key has letters in a blue box?
+37433	what the picture shows?
+37440	what two letters are in the orange box?
+37444	what number is on the person that has the ball?
+37448	what is the color of the phone?
+37461	what is the plane's serial number?
+37467	whats the time on the watch?
+37468	what is the date on the watch?
+37469	who is the sponsor on the shirt?
+37473	what state is the player in the red shirt from?
+37474	what number is the player in the red shirt wearing?
+37476	what state is the license plate for?
+37477	is santa monica on the bottom of this plate?
+37486	what team is at bat?
+37487	what team is the player standing near the dugout on?
+37492	what's the title of the book to the very top right?
+37500	who is advertised on the truck?
+37504	what do the buttons do?
+37505	what does the button on the far left do?
+37509	how much time is left on the meter?
+37510	is this parking meter broken?
+37511	what traffic sign is seen her?
+37512	how many sides are on the sign?
+37547	is there any information posted at this train station?
+37583	what country does the player with the ball represent?
+37597	what is the year printed on the bus?
+37598	what city name is mentioned on the bus?
+37607	what is the top truck?
+37616	how many gs are mentioned in the poster?
+37635	what brand is the bottle furthest to the right on the table?
+37636	what are the names of the sodas represented by these bottles?
+37637	what brand is this jacket?
+37649	what is the first letter we can see on the can?
+37652	what is the title of the top book?
+37659	what are pedestrians doing in this sign?
+37665	which book is at the top right?
+37703	what is the team name of the school the girl goes to?
+37708	what time is the clock set to?
+37709	who makes this clock?
+37716	what is the title of one of the books on the shelf?
+37717	what is the title of the left bottom book?
+37723	who wrote this book?
+37724	what service is this plane for?
+37725	what is in the bag being loaded?
+37730	is there a letter on the yellow car?
+37731	what kind of tires are those?
+37732	what is this sign warning drivers of?
+37733	what color are the letters?
+37777	what is the license plate number of this van?
+37778	who is the author of the book?
+37779	what is the title of this book?
+37787	what's the last word on the right page?
+37788	name a letter on that keyboard back there?
+37797	what time does the fancy clock read?
+37809	what kind of watch is this?
+37810	what is the watch resistant to?
+37816	what time is it on the clock in the upper right of the monitor?
+37818	what is one of the letters on the woman's jersey?
+37819	where was the car bought?
+37824	what is the pitcher's number?
+37825	what is the right number?
+37827	what athlete number is this runner?
+37849	what does it say on the glass?
+37852	what is the date on the screen?
+37856	what is the license plate number?
+37857	what does it say on the shelf on the right?
+37858	what does it say on the shelf on the left?
+37859	what year were these pictures taken?
+37860	what is the caption on the bottom left?
+37870	what brand of clock?
+37871	what make is the clock?
+37872	what is the time on the clock?
+37873	what does the sign say?
+37887	is this on the right or left keyboard?
+37891	what does the license plate say?
+37894	what kind of car is it?
+37895	what is the license plate number?
+37900	what letter is on the taxi, the letter is inside a black circle?
+37901	what is the model of the car?
+37902	what does the license plate say?
+37903	what is the name on the camera?
+37906	what newspaper is quoted on the sign?
+37907	what does the blue sign say?
+37929	what is the title of this book?
+37947	what does the license plate read?
+37960	what does the license plate say?
+37977	whose name is on the bottle?
+37989	what is the number on the train?
+37999	what number of guy in middle?
+38013	what animal is written on the bottom of his shirt?
+38016	what's the brand of laptop?
+38017	what brand of laptop is this?
+38022	whats the womanholding?
+38023	what does the sign say?
+38024	what is the last letter of the word written on the sign?
+38033	which letters comprise the logo on this man's hat?
+38034	what brand is his cleats?
+38055	what number is on the back of the one with blue sleeves?
+38061	what number is the little hand pointing to?
+38062	how many days does the watch say?
+38073	what is the country mentioned on the plane?
+38079	what kind of bus is this?
+38080	what phone number is on the back of this bus?
+38088	what website is the billboard advertising?
+38089	is that a cla billboard?
+38106	what number is on the left bottle?
+38114	what is the name of the ale with the red label?
+38115	what is the brand of ale in the bottles?
+38118	what brand is shown in the clock?
+38121	how many teaspoons of sugar does this recipe call for?
+38123	what does the sign say after command model?
+38129	what is the brand of cell phone case?
+38131	what are these bottles of?
+38141	yes, the sale sign is here?
+38146	what is the building number to the left of the man?
+38147	what building unit number is above the man's head?
+38149	what is the jersey number of the player in the middle?
+38152	what brand of soap is shown in the soap box?
+38155	what is the licence plate number?
+38182	what brand of phone is the bigger one?
+38183	what brand is the phone on the right?
+38198	what is the name of the highschool?
+38202	what brand is the remote control?
+38203	how many channel number selections does this remote have?
+38207	what are the first two letters of the license plate?
+38208	what is the full plate number?
+38219	what is the make of car?
+38220	what is the license plate number?
+38221	what is the red button?
+38223	what baseball team name is on this pitcher's jersey?
+38224	what letter is on the player's hat?
+38266	what brand is advertised on the billboard?
+38267	what television network is on there?
+38268	what kind of bus is this?
+38269	what does the orange letters on top of the bus say?
+38288	what language is the book for?
+38290	what time is shown on the clock?
+38292	what type of product is in this box?
+38295	what is the title of the book?
+38303	what brand/company/product is on the poster hanging off the table?
+38320	what word is written on both orange signs?
+38328	what project is on the white board?
+38337	what department is mentioned on the blue sign?
+38343	what time does the clock read?
+38354	what year was this wine bottled?
+38364	where does the flag say strength is found?
+38365	what is the paper asking about?
+38370	what is the name on the building?
+38371	what is the last word of the name of the tall building in the background on the left?
+38373	what brand of phone is this/?
+38386	what does the logo in the top right say?
+38400	what bottle is on the left?
+38414	are there flyers posted on this pole?
+38430	what is name of this beer? it is printed above the words "a charitable"?
+38436	what year is the census van for?
+38445	what is the man on the far rights jersey number?
+38459	what is the name on the bottle all the way to the right?
+38460	what is the name on the middle bottle?
+38461	what time is it on the phone in the middle?
+38462	what kind of laptop is this?
+38463	what letter is in the blue circle on the top right of the screen?
+38477	what date is on the lower left poster?
+38480	what time is it on the clock?
+38481	how many minutes more is the clock to reach 3o clock?
+38494	what is the word seen in red on the bottom of this beer bottle?
+38495	what does the last word on the label say?
+38521	what is the name of the business on the box?
+38531	what army is on the poster?
+38545	what time is on the watch?
+38550	what number is on the phone screen?
+38552	what city is this sign for?
+38566	what kind of hat is the man wearing?
+38581	what time is shown on the watch?
+38582	what brand is this yellow watch?
+38604	what brand of computer is that?
+38616	what number is on the man's jersey?
+38630	what is the licence plate?
+38648	what number is the pitcher?
+38665	what is in the brown container?
+38670	what key is next to they space bar?
+38671	what is written on the white metal arm?
+38716	what street is picture here?
+38749	what is the brand of shirt?
+38754	what is the number on the side of the plane?
+38777	what is this vehicle's license plate?
+38790	what watch brand is that?
+38791	what time is displayed on the watch?
+38835	what does it say on the shirt of the man in the white?
+38836	what does it say on the man's striped shirt?
+38837	is this bus going to city center today?
+38838	where is this bus going?
+38852	what is the second player's jersey number?
+38853	what is on the black shirt?
+38861	what kind of drink is in the green bottle?
+38862	what is the brand of the beer?
+38921	what is the name of the magazine in the picture?
+38923	what number does the batter wear?
+38924	what player number is the batter?
+38937	on the bottom bottle what does the label say?
+38945	what number is the player wearing?
+38947	what is the book about?
+38948	creating who according to the book?
+38954	what´s the name of the book next to the one that says german?
+38959	what does the sign say was an inside job?
+38961	what number is in the date slot?
+38975	what is the license plate number on the bus?
+38976	what is the red and white bus's next stop?
+38989	what kind of machine is this car for?
+38990	was the mystery machine van in the cartoon scooby doo?
+39008	what is the shirt number of this baseball player?
+39009	what are the letters on the logo on his sleeve?
+39011	what is the price of a bottle?
+39013	what is the name of this boat?
+39014	what magazine can you see under the table?
+39016	what number is this helicopter?
+39023	what is written on the streen sign?
+39024	are the words 4 way written above the red stop sign?
+39034	which symbol is on the tail of the plane?
+39035	what letter come before the m on the front of the plane?
+39036	what do the orange letters say on the bus?
+39037	what city is this a bus for?
+39039	what two measurements can this cup measure?
+39040	how many cups can this measuring cup hold?
+39056	what time is on the watch?
+39057	are the numbers units per hour?
+39060	what letters are in the bottom right corner?
+39073	what kind of shop is the car parked in front of?
+39074	what kind of car wash is this?
+39080	whats written in 3 letters on the side of the yellow helicopter?
+39082	what is the text on the green button?
+39083	what kind of remote is this?
+39088	what is written on the white car?
+39091	what's the name of these phones?
+39092	what airline does the plane belong to?
+39097	does it say planeta anywhere on the left book?
+39102	what time does the left most clock show?
+39112	what is the last name of number 55?
+39113	what number is on the man's shirt?
+39116	what prison name is on the plaque the man is holding?
+39135	what team name is on the right players shirt?
+39138	what hotel sponsors this field?
+39139	what number is the man in the front?
+39157	what is the name on the can?
+39158	what is written on the front of that building?
+39180	what is the first word on the page?
+39198	how many total fl oz are in each box?
+39199	what drink is in the boxes?
+39215	what are they looking for?
+39216	what is the first word on the mug?
+39229	whats the brand on this bottle?
+39237	what is the big letter on the sign?
+39250	what is the number of the jersey?
+39253	what is the second word on the woman's shirt to the left?
+39255	what team does the man holding the football support?
+39263	what number is the girl facing forward?
+39264	what type of geek are they referring to?
+39277	what does it say on the shirt of the man holding the bike?
+39278	what are the 3 white letters on the black shirt?
+39301	what brand name is on the bottle?
+39307	what is the website on the cup?
+39308	what is the web address listed below the logo?
+39316	what kind of product does the label say this is?
+39325	what is the car sponsor in the back?
+39336	what brand shoes are these?
+39337	what number is the player?
+39338	what letter is on the red shorts?
+39341	what car maker is this car from?
+39347	what colour is bus?
+39351	what team do these baseball players play for?
+39352	what is the number of the jersey on the left?
+39386	how many people are working on the electric cables?
+39387	what letters form a word to the left of the man sitting down?
+39388	what is inside the building?
+39395	what team is written on the baseball in the right hand corner?
+39396	what company sponsored this?
+39407	what kind of ale is on the table?
+39410	in the jar next to the mustard on the bottom shelf of the refrigerator door, how it that item cut?
+39416	what is written on the box-robots head?
+39417	what company is mentioned on the box robot?
+39423	what is written across the shirt?
+39437	what is the name of the food truck?
+39438	what food does the dominic's food truck primarily sell?
+39463	what team is this?
+39475	what is the name of this drink?
+39481	what team is this?
+39484	what is the woman's name on the tv?
+39513	what letter is on the cap?
+39542	what is the inside the glass?
+39546	title of the blue book?
+39547	what is the title of the thin red book?
+39567	what directive is the sign giving?
+39569	how much is a polos crazy bike?
+39570	what is the adjective used to describe the bike?
+39578	what's the 2nd word on the red and white sign?
+39584	what word is in yellow on a purple background?
+39595	what store is seen in the background?
