@@ -14,13 +14,39 @@ def main():
 	parser = argparse.ArgumentParser()
 
 	parser.add_argument('--KEYWORD_LIST', '-k', help='Keywords list')
+	# parser.add_argument("--QUESTION_FIELD", '-q', type=bool)
+	parser.add_argument("--ANSWER_FIELD", '-a',
+							help="Search for `Not Require Reading` answer",
+							default=False,
+							action='store_true')
 	args = parser.parse_args()
 
 	trainset, valset, testset = read_dataset(dataset_path)
-	subsetname = args.KEYWORD_LIST[:-4]
-	keywordlist = read_keywords(args)
-	subset = split_dataset(valset, subsetname, keywordlist)
+
+	if (args.ANSWER_FIELD):
+		subset = filter_not_require_reading(valset)
+		subsetname = "not_require_reading"
+	else:
+		print("Keyword searching in Question texts ...")
+		subsetname = args.KEYWORD_LIST[:-4]
+		keywordlist = read_keywords(args)
+		subset = split_dataset(valset, subsetname, keywordlist)
+	
 	save_subset("val", subsetname, subset)
+
+
+def filter_not_require_reading(dataset):
+	split_filter = "not require reading"
+	# for idx in range(len(dataset)):
+	index_list = []
+	for idx in range(len(dataset)):
+		ans_str = "".join([x+" " for x in dataset.iloc[idx]['answers']])
+		if (split_filter in ans_str):
+			index_list.append(idx)
+	subset = dataset.iloc[index_list]
+	print(subset)
+	return subset
+
 
 def save_subset(subset_source, subsetname, subset):
 	subset_str = "".join([str(x)+"," for x in set(subset['question_id'])])
@@ -67,9 +93,13 @@ def read_dataset(dataset_path):
 	train_data = pd.json_normalize(train_list, record_path='data')
 	test_data = pd.json_normalize(test_list, record_path='data')
 
+	# Index(['question', 'image_id', 'image_classes', 'flickr_original_url',
+	# 	'flickr_300k_url', 'image_width', 'image_height', 'answers',
+	# 	'question_tokens', 'question_id', 'set_name'],
+	# 	dtype='object')
 
-	val_text = val_data[['question_id', 'question']]
-	train_text = train_data[['question_id', 'question']]
+	val_text = val_data[['question_id', 'question', 'answers']]
+	train_text = train_data[['question_id', 'question', 'answers']]
 	test_text = test_data[['question_id', 'question']]
 
 	return train_text, val_text, test_text
