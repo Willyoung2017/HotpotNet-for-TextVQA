@@ -12,8 +12,8 @@ All these utils are applied to `val` dataset right now.
 
 `dataset_splitter.py` generates subset where there are certain words in questions.
 
-- Generate your own *keywordlist.txt*, put it in the same directory with your splitter
-- `python dataset_splitter.py -k [your_keyword_list_txt_file]`
+- Generate your own *keywordlist.txt*, put it in the `subset_filters` folders.
+- `python dataset_splitter.py -k [your_keyword_list_name]`, your keywrod list is your filter, which is used to filter the dataset. 
 - The output will be two `.txt` files
   - One contains all the `question_id` that meets your requirement.
   - The other one show the `question` with the `question_id`
