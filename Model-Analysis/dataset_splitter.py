@@ -13,7 +13,7 @@ def main():
 	dataset_path = "../Data/textvqa/"
 	parser = argparse.ArgumentParser()
 
-	parser.add_argument('--KEYWORD_LIST', '-k', help='Keywords list')
+	parser.add_argument('--KEYWORD_LIST', '-k', help='Keywords list file')
 	# parser.add_argument("--QUESTION_FIELD", '-q', type=bool)
 	parser.add_argument("--ANSWER_FIELD", '-a',
 							help="Search for `Not Require Reading` answer",
@@ -28,7 +28,7 @@ def main():
 		subsetname = "not_require_reading"
 	else:
 		print("Keyword searching in Question texts ...")
-		subsetname = args.KEYWORD_LIST[:-4]
+		subsetname = args.KEYWORD_LIST
 		keywordlist = read_keywords(args)
 		subset = split_dataset(valset, subsetname, keywordlist)
 	
@@ -72,7 +72,8 @@ def split_dataset(dataset, subsetname, keywordlist):
 	return subset
 
 def read_keywords(args):
-	with open(args.KEYWORD_LIST, 'r') as f:
+	keyword_list_path = "subset_filters/" + args.KEYWORD_LIST + ".txt"
+	with open(keyword_list_path, 'r') as f:
 		keylist = f.read().splitlines()
 	f.close()
 	return keylist
