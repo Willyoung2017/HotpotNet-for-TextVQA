@@ -14,39 +14,58 @@ def main():
 	parser = argparse.ArgumentParser()
 
 	parser.add_argument('--KEYWORD_LIST', '-k', help='Keywords list file')
-	# parser.add_argument("--QUESTION_FIELD", '-q', type=bool)
+	parser.add_argument("--QUESTION_FIELD", '-q',
+							help="Search for questions that include keyword",
+							default=False,
+							action='store_true')
 	parser.add_argument("--ANSWER_FIELD", '-a',
-							help="Search for `Not Require Reading` answer",
+							help="Search for questions whose answers include keyword",
 							default=False,
 							action='store_true')
 	args = parser.parse_args()
 
 	trainset, valset, testset = read_dataset(dataset_path)
 
+	subsetname = args.KEYWORD_LIST
+	keywordlist = read_keywords(args)
+	print("keyword: ", keywordlist)
+
 	if (args.ANSWER_FIELD):
-		subset = filter_not_require_reading(valset)
-		subsetname = "not_require_reading"
+		print("Keyword searching in Answer texts ...")
+		subset = split_dataset_answer(valset, subsetname, keywordlist)
 	else:
 		print("Keyword searching in Question texts ...")
-		subsetname = args.KEYWORD_LIST
-		keywordlist = read_keywords(args)
-		subset = split_dataset(valset, subsetname, keywordlist)
+		subset = split_dataset_question(valset, subsetname, keywordlist)
 	
 	save_subset("val", subsetname, subset)
 
 
-def filter_not_require_reading(dataset):
-	split_filter = "not require reading"
+def split_dataset_answer(dataset, subsetname, keywordlist):
 	# for idx in range(len(dataset)):
 	index_list = []
 	for idx in range(len(dataset)):
-		ans_str = "".join([x+" " for x in dataset.iloc[idx]['answers']])
-		if (split_filter in ans_str):
-			index_list.append(idx)
+		# ans_str = "".join([x+" " for x in dataset.iloc[idx]['answers']])
+		# for split_filter in keywordlist:
+		# 	if (split_filter in ans_str):
+		# 		index_list.append(idx)
+		# 		continue
+
+		answers = dataset.iloc[idx]['answers']
+		for split_filter in keywordlist:
+			if (split_filter in answers):
+				index_list.append(idx)
+				continue
 	subset = dataset.iloc[index_list]
 	print(subset)
 	return subset
 
+def split_dataset_question(dataset, subsetname, keywordlist):
+	split_filter = "".join([keyword + "|" for keyword in keywordlist])
+	split_filter = split_filter[:-1]
+	subset = dataset[dataset['question'].str.contains(split_filter, regex=True)]
+	# print(subsetname, ":", len(dataset), "->", len(subset))
+	print(subset)
+	return subset
 
 def save_subset(subset_source, subsetname, subset):
 	subset_str = "".join([str(x)+"," for x in set(subset['question_id'])])
@@ -61,15 +80,6 @@ def save_subset(subset_source, subsetname, subset):
 	with open("subsets/"+subset_source+"_"+subsetname+"_text.txt", 'w') as f:
 		f.write(subset_str_text)
 	f.close()
-
-def split_dataset(dataset, subsetname, keywordlist):
-	split_filter = "".join([keyword + "|" for keyword in keywordlist])
-	split_filter = split_filter[:-1]
-	# print("filter:", split_filter)
-	subset = dataset[dataset['question'].str.contains(split_filter, regex=True)]
-	# print(subsetname, ":", len(dataset), "->", len(subset))
-	print(subset)
-	return subset
 
 def read_keywords(args):
 	keyword_list_path = "subset_filters/" + args.KEYWORD_LIST + ".txt"
