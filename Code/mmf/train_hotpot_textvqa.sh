@@ -3,9 +3,10 @@ export PYTHONPATH=.
 export MMF_CACHE_DIR=./cache/
 
 MODEL=${2}
-SAVEDIR=${3}
+CONFIG=${3}
+SAVEDIR=${4}
 
 mmf_run dataset=textvqa_hotpot \
-  model=hotpot_net \
+  model=${MODEL} \
   config=${CONFIG} \
   env.save_dir=${SAVEDIR}
