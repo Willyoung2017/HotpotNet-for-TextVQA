@@ -307,6 +307,15 @@ class TextVQAHotpotDataset(TextVQADataset):
         else:
             sample.overlap = torch.tensor(-1)
             sample.overlap_obj, sample.overlap_ocr = torch.tensor(0), torch.tensor(0)
+        
+        #######################################################################
+        # 4. Load Whole Image Feature
+        sample.whole_img_feat = sample["image_feat_2"]["whole_img_feat"]
+        sample.whole_img_feat_size = 2048
+        sample.whole_img_model = "ResNet50"
+        sample.img_c_w_h = sample["image_feat_2"]["img_c_w_h"]
+        sample.c_w_h = sample.img_c_w_h.size()
+
         return sample
 
     def add_answer_info(self, sample_info, sample):
