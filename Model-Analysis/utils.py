@@ -44,8 +44,8 @@ def read_dataset(dataset_path):
 						'image_id',
 						'set_name']
 
-	val_text = val_data[selected_columns]
-	train_text = train_data[selected_columns]
-	test_text = test_data[selected_columns]
+	# val_text = val_data[selected_columns]
+	# train_text = train_data[selected_columns]
+	# test_text = test_data[selected_columns]
 
-	return train_text, val_text, test_text
+	return train_data, val_data, test_data

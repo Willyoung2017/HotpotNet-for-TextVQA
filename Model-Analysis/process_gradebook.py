@@ -1,3 +1,4 @@
+from ast import arg
 import pandas as pd
 import numpy as np
 import pickle
@@ -5,7 +6,7 @@ import argparse
 import os
 import random
 from pathlib import Path
-import cv2
+# import cv2
 import json
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,67 +14,23 @@ from PIL import Image
 
 
 from utils import read_dataset, read_obj_vocab
-from visualization import visualize_w_bb, visualize_img
+from visualization import visualize_w_bb, visualize_img, visualize_w_qa
+from evaluator import EvalAIAnswerProcessor, TextVQAAccuracyEvaluator
+from read_gradebook import generate_gradebook
 
-
-
-def main(args):
-	gradebook_path = "gradebooks/grade_book_" + args.GRADEBOOK + "_with_pred.csv"
-	gradebook = pd.read_csv(gradebook_path)
-	models = {'multimodal-baselines':
-				['hotpot-lorra',
-				'hotpot-without-mmt',
-				'hotpot-without-object-label',
-				'hotpot'],
-			'unimodal-baselines':
-				['ocr', 'question', 'question'],
-			'competitive-baselines':
-				['lorra', 'm4c', 'tap']}
-	with open("model_preds.pickle", "rb") as f:
-		model_preds_all = pickle.load(f)
-	f.close()
-
-	# subset = pd.read_csv("gradebooks/grade_book_" + args.SUBSETS + "_with_pred.csv")
-
-	dataset_path = "../Data/textvqa/"
-	trainset, valset, testset = read_dataset(dataset_path)
-	obj_vocab = read_obj_vocab("../Data/objects_vocab.txt")
-	df = gradebook.merge(valset[['question_id', 'image_classes', 'image_id', 'set_name']], on='question_id')
-	
-
-	show_gradebook(df, args, valset)
-
-
-def visualize_w_pred(data, img_path, info_path, subset):
-	with open(img_path, "rb") as f:
-		img_file = Image.open(f)
-		img = img_file.convert("RGB")
-	f.close()
-	img_id = img_path.split("/")[-1]
-	save_path = "../../failure_cases/" + subset + "/" + str(data['question_id']) + "_" + img_id
-	print(save_path)
-	print(data)
-
-	# visualize_img(img_path)
-	plt.text(0, -50, u'Question: {}'.format(data['question']), fontsize=10)
-	plt.text(0, -20, u'Answer: {}'.format(data['answers']), fontsize=10)
-	plt.imshow(img)
-	plt.axis('off')
-	plt.savefig(save_path)
-	plt.show()
 
 def show_gradebook(gradebook, args, dataset):
 	for idx in range(len(dataset)):
 	# idx = 1
 		sample_data = gradebook.iloc[idx]
-
-		if not (sample_data['accu_hotpot'] == 0.0 and sample_data['accu_tap'] > 0.6):
-			continue
+		print(sample_data)
+		# if not (sample_data['accu_hotpot'] == 0.0 and sample_data['accu_tap'] > 0.6):
+		# 	continue
 
 		print("idx: ", idx, "/", len(dataset))
 		question_id = sample_data['question_id']
-		# print(sample_data)
-		img_class = dataset[dataset['question_id']==question_id]['image_classes'].item()
+
+		image_classes = dataset[dataset['question_id']==question_id]['image_classes'].item()
 		img_id = dataset[dataset['question_id']==question_id]['image_id'].item()
 		set_name = dataset[dataset['question_id']==question_id]['set_name'].item()
 		if (set_name=="test"):
@@ -84,15 +41,30 @@ def show_gradebook(gradebook, args, dataset):
 			imgset_path = "train_images/"
 		info_path = args.DATAINFO_PATH + set_path + img_id + "_info.npy"
 		img_path = args.IMAGE_PATH + imgset_path + img_id + ".jpg"
+		
+		info = np.load(info_path, encoding = "latin1", allow_pickle=True).item()
 
+		visualize_w_qa(sample_data, img_path, info, args.GRADEBOOK)
 
-		# downloaded = 0
-		# if os.path.exists(info_path):
-		# 	info = np.load(info_path, encoding = "latin1", allow_pickle=True).item()
-		# 	downloaded += 1
-		visualize_w_pred(sample_data, img_path, info_path, args.GRADEBOOK)
+def gen_gradebook_w_pred(gradebook, args):
+	# print(gradebook.columns)
 
-
+	with open(args.PREDICTION, "r") as pred_file:
+		pred_df = pd.read_json(pred_file)
+	pred_file.close()
+	# # question_id          image_id                    answer          pred_source
+	# print(pred_df)
+			
+	gb_pred = gradebook[['question_id', 'question', 'answers']].copy() # save the accuracy of all models on all questions
+	gb_pred = gb_pred.merge(pred_df, on='question_id', how='inner')
+	gb_pred.rename(columns={"answer":"prediction"}, inplace=True)
+	
+	eval = TextVQAAccuracyEvaluator()
+		
+	gb_pred["pred_score"] = gb_pred.apply(lambda row: eval.eval_pred_list([{"pred_answer":row.prediction, "gt_answers":row.answers}]), axis=1)
+	print(gb_pred)
+	print("Subset accuracy: ", gb_pred['pred_score'].sum()/len(gb_pred))
+	# gb_pred.to_csv("gradebooks/gb_" + args.GRADEBOOK + "_with_pred.csv", index=False)
 
 
 def acc_dist(gradebook):
@@ -112,18 +84,43 @@ def parse_args():
 	parser.add_argument('--GRADEBOOK', '-g',
 						help='gradebook name',
 						required=True)
+	parser.add_argument('--PREDICTION', '-p',
+						help='prediction file',
+						default="./pred/multimodal-baselines/textvqa-val-hotpot.json")
 	parser.add_argument('--DATAINFO_PATH', '-info',
 						help='Data info path',
 						default="../../data/")
 	parser.add_argument('--IMAGE_PATH', '-i',
 						help='Data info path',
 						default="../../data/textvqa/")
-	parser.add_argument('--SUBSETS', '-s',
-						default="obj",
-						help='subset name')
+	parser.add_argument("--VISUALIZATION", '-v',
+						help="Visualize gradebook samples",
+						default=False,
+						action='store_true')
 	args = parser.parse_args()
 	return args
 
 if __name__ == '__main__':
 	args = parse_args()
-	main(args)
+	dataset_path = "../Data/textvqa/"
+	trainset, valset, testset = read_dataset(dataset_path)
+	obj_vocab = read_obj_vocab("../Data/objects_vocab.txt")
+
+	# # baseline model zoo
+	# models = {}
+	# models["multimodal-baselines"] = ["hotpot-lorra", "hotpot-without-mmt", "hotpot-without-object-label", "hotpot"]
+	# models["unimodal-baselines"] = ["object", "ocr", "question"]
+	# models["competitive-baselines"] = ["lorra", "m4c", "tap"]
+
+	# gradebook_path = "gradebooks/grade_book_" + args.GRADEBOOK + ".csv"
+	# gradebook = pd.read_csv(gradebook_path)
+
+
+	# print(valset)
+	gradebook = generate_gradebook(args.GRADEBOOK,valset)
+
+	if args.VISUALIZATION:
+		show_gradebook(gradebook, args, valset)
+
+	# print(gradebook)
+	gen_gradebook_w_pred(gradebook, args)

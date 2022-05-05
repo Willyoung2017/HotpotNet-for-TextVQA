@@ -27,7 +27,6 @@ def visualize_w_bb(img_path, info, obj_vocab, showbg=True):
 	objset = list(set(info['objects']))
 	# print("set of objects: ", objset)
 
-	##### visualize #####
 	for obj_idx in range(100):
 		obj = info['objects'][obj_idx]
 		box = info['bbox'][obj_idx]
@@ -62,66 +61,80 @@ def visualize_w_bb(img_path, info, obj_vocab, showbg=True):
 						(0, 0, 0),
 						thickness=1)
 	cv2.imwrite("tmp.png", img)
-	# cv2.imshow("temp", img)
-	# cv2.waitKey()
-	# cv2.destroyAllWindows()
 
 def visualize_img(img_path):
 	img = cv2.imread(img_path)
 	print(img_path)
 	cv2.imwrite("tmp_orig.png", img)
 
+def visualize_w_qa(data, img_path, info, subset_name):
+	with open(img_path, "rb") as f:
+		img_file = Image.open(f)
+		img = img_file.convert("RGB")
+	f.close()
+	img_id = img_path.split("/")[-1]
+	# save_path = "../../failure_cases/" + subset_name + "/" + str(data['question_id']) + "_" + img_id
+	# print(save_path)
+	print(data)
 
-def process_gradebook(gradebook, args, dataset):
-	idx = 0
-	sample_gb = gradebook.iloc[idx]
-	question_id = sample_gb['question_id']
-	img_class = dataset[dataset['question_id']==question_id]['image_classes'].item()
-	img_id = dataset[dataset['question_id']==question_id]['image_id'].item()
-	set_name = dataset[dataset['question_id']==question_id]['set_name'].item()
-	if (set_name=="test"):
-		set_path = "test/"
-		imgset_path = "test_images/"
-	else:
-		set_path = "train/"
-		imgset_path = "train_images/"
-	sample_info_path = args.DATAINFO_PATH + set_path + img_id + "_info.npy"
-	img_path = args.IMAGE_PATH + imgset_path + img_id + ".jpg"
-	visualize_img(img_path)
+	# visualize_img(img_path)
+	plt.text(0, -50, u'Question: {}'.format(data['question']), fontsize=10)
+	plt.text(0, -20, u'Answer: {}'.format(data['answers']), fontsize=10)
+	plt.imshow(img)
+	plt.axis('off')
+	# plt.savefig(save_path)
+	plt.show()
 
-def main(args):
-	dataset_path = "../Data/textvqa/"
-	trainset, valset, testset = read_dataset(dataset_path)
-	obj_vocab = read_obj_vocab("../Data/objects_vocab.txt")
+# def process_gradebook(gradebook, args, dataset):
+# 	idx = 0
+# 	sample_gb = gradebook.iloc[idx]
+# 	question_id = sample_gb['question_id']
+# 	img_class = dataset[dataset['question_id']==question_id]['image_classes'].item()
+# 	img_id = dataset[dataset['question_id']==question_id]['image_id'].item()
+# 	set_name = dataset[dataset['question_id']==question_id]['set_name'].item()
+# 	if (set_name=="test"):
+# 		set_path = "test/"
+# 		imgset_path = "test_images/"
+# 	else:
+# 		set_path = "train/"
+# 		imgset_path = "train_images/"
+# 	sample_info_path = args.DATAINFO_PATH + set_path + img_id + "_info.npy"
+# 	img_path = args.IMAGE_PATH + imgset_path + img_id + ".jpg"
+# 	visualize_img(img_path)
 
-	### "all_zero": samples with 0.0 accuracy in each model
-	### "zero_one": samples that get 1.0 accuracy in some models
-	###                      and get 0.0 accuracy in others
+# def main(args):
+# 	dataset_path = "../Data/textvqa/"
+# 	trainset, valset, testset = read_dataset(dataset_path)
+# 	obj_vocab = read_obj_vocab("../Data/objects_vocab.txt")
 
-	gradebook_path = "gradebooks/grade_book_" + args.GRADEBOOK + ".csv"
-	gradebook = pd.read_csv(gradebook_path)
-	print(args.GRADEBOOK, "\ttotal: ", len(gradebook))
-	# print(gradebook.columns)
+# 	### "all_zero": samples with 0.0 accuracy in each model
+# 	### "zero_one": samples that get 1.0 accuracy in some models
+# 	###                      and get 0.0 accuracy in others
 
-	process_gradebook(gradebook, args, valset)
+# 	gradebook_path = "gradebooks/grade_book_" + args.GRADEBOOK + ".csv"
+# 	gradebook = pd.read_csv(gradebook_path)
+# 	print(args.GRADEBOOK, "\ttotal: ", len(gradebook))
+# 	# print(gradebook.columns)
 
-
-def parse_arg():
-	parser = argparse.ArgumentParser()
-
-	parser.add_argument('--GRADEBOOK', '-g',
-						help='gradebook name',
-						required=True)
-	parser.add_argument('--DATAINFO_PATH', '-info',
-						help='Data info path',
-						default="../../data/")
-	parser.add_argument('--IMAGE_PATH', '-i',
-						help='Data info path',
-						default="../../data/textvqa/")
-	args = parser.parse_args()
-	return args
+# 	process_gradebook(gradebook, args, valset)
 
 
-if __name__ == '__main__':
+# def parse_arg():
+# 	parser = argparse.ArgumentParser()
+
+# 	parser.add_argument('--GRADEBOOK', '-g',
+# 						help='gradebook name',
+# 						required=True)
+# 	parser.add_argument('--DATAINFO_PATH', '-info',
+# 						help='Data info path',
+# 						default="../../data/")
+# 	parser.add_argument('--IMAGE_PATH', '-i',
+# 						help='Data info path',
+# 						default="../../data/textvqa/")
+# 	args = parser.parse_args()
+# 	return args
+
+
+# if __name__ == '__main__':
 	args = parse_arg()
 	main(args)
