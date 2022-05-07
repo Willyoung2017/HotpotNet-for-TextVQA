@@ -1,7 +1,9 @@
-## Intro and Model Analysis Pipeline
+This folder contains code and quantitative results of models. 
+
+## File Structure
+- `model_predictions`: prediction results of unimodal baselines, competitive baselines, hotpot baselines and finalized hotpot models
 
 
-This folder is for performing model analysis.
 
 If using notebooks, please commit them here with plots/graphs/statistics annotated with inline comments.  
 
