@@ -13,6 +13,30 @@ This folder contains code and quantitative results of models.
         -  generate gradebook, summary figures (accuracies), accuracy distributions
         -  visualize image and print question data (question text, ground truth answer, model predictions, model accuracy scores)
 
+## Pipeline and File Usage
+- Make sure your working directory is under `Model-Anlaysis/`
+- Put model prediction results under `model_predictions`
+- To update quantitative results (gradebook, accuracies and accuracy distribution), execute the following command:
+    
+    `python generate_gb_dist_accu.py --task update`
+
+- To visualize questions and select failure cases, execute the following commands:
+    - To visualize one particular question, you need to specify the question id (e.g. 37886):  
+
+    `python generate_gb_dist_accu.py --task viz --viz_question_id 37886`
+    
+    - To sequentially visualize all challenging questions:  
+
+    `python generate_gb_dist_accu.py --task viz --viz_data hard`
+    
+    - To sequentially visualize worst performing questions for a specific model, you need to specify the name of model as denoted in `.json` file (e.g. "hotpot-lorra"):  
+
+    `python generate_gb_dist_accu.py --task viz --viz_data worst --viz_worst_model hotpot-lorra`
+    
+    
+---
+
+
 If using notebooks, please commit them here with plots/graphs/statistics annotated with inline comments.  
 
 If you instead use command-line tools, please describe how to run your code, and upload generated plots and statistics with documentation explaining them.
