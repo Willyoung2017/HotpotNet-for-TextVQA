@@ -1,4 +1,10 @@
-This folder is for performing model analysis.
+This folder contains code and quantitative results of models. 
+
+## File Structure
+- `model_predictions`: prediction results of unimodal baselines, competitive baselines, hotpot baselines and finalized hotpot models
+- Quantitative Analysis Results:
+    - `final_gradebooks`: finalized gradebooks containing accuracy scores of all models on whole validation dataset as well as subsets
+    - `final_accuracies`: finalized accuracies and accuracy distributions of all models
 
 If using notebooks, please commit them here with plots/graphs/statistics annotated with inline comments.  
 
