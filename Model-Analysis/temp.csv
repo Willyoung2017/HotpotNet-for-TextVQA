@@ -1,0 +1,6 @@
+accuracy,accu_hotpot,accu_hotpot-without-mmt,accu_hotpot-without-object-label,accu_hotpot-lorra,accu_m4c,accu_tap,accu_lorra,accu_ocr,accu_object,accu_question
+1.0,1994,1820,1999,1274,1725,2180,1190,1090,528,794
+0.9,135,112,136,79,109,165,85,73,47,71
+0.6,131,135,129,97,121,147,94,86,49,71
+0.3,240,224,240,186,220,252,186,185,121,165
+0.0,2500,2709,2496,3364,2825,2256,3445,3566,4255,3899

@@ -86,7 +86,7 @@ def parse_args():
 						required=True)
 	parser.add_argument('--PREDICTION', '-p',
 						help='prediction file',
-						default="./pred/multimodal-baselines/textvqa-val-hotpot.json")
+						default="./model_output/multimodal-baselines/textvqa-val-hotpot.json")
 	parser.add_argument('--DATAINFO_PATH', '-info',
 						help='Data info path',
 						default="../../data/")
