@@ -1,10 +1,14 @@
 This folder contains code and quantitative results of models. 
 
 ## File Structure
-- `model_predictions`: prediction results of unimodal baselines, competitive baselines, hotpot baselines and finalized hotpot models
+- `model_predictions`: finalized prediction results of unimodal baselines, competitive baselines, hotpot baselines and finalized hotpot models
 - Quantitative Analysis Results:
     - `final_gradebooks`: finalized gradebooks containing accuracy scores of all models on whole validation dataset as well as subsets
     - `final_accuracies`: finalized accuracies and accuracy distributions of all models
+    - `final_subsets`: finalized subsets of validation dataset that are of interest in this research project. 
+- `intermediate_results`: (outdated) intermediate results of subsets, baseline model predictions and gradebooks
+- Code for Analysis:
+    - `dataset_splitter.py`: generate subset
 
 If using notebooks, please commit them here with plots/graphs/statistics annotated with inline comments.  
 
