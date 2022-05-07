@@ -9,6 +9,9 @@ This folder contains code and quantitative results of models.
 - `intermediate_results`: (outdated) intermediate results of subsets, baseline model predictions and gradebooks
 - Code for Analysis:
     - `dataset_splitter.py`: generate subset
+    - `generate_gb_dist_accu.py`: 
+        -  generate gradebook, summary figures (accuracies), accuracy distributions
+        -  visualize image and print question data (question text, ground truth answer, model predictions, model accuracy scores)
 
 If using notebooks, please commit them here with plots/graphs/statistics annotated with inline comments.  
 
