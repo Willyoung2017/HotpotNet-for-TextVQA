@@ -6,10 +6,10 @@ This folder contains code and results of qualitative and quantitative model anal
     - `final_gradebooks`: finalized gradebooks containing accuracy scores of all models on whole validation dataset as well as subsets
     - `final_accuracies`: finalized accuracies and accuracy distributions of all models
     - `final_subsets`: finalized subsets of validation dataset that are of interest in this research project. 
-- `intermediate_results`: (outdated) intermediate results of subsets, baseline model predictions and gradebooks
+- `intermediate_code_and_results`: (outdated) intermediate code and results of subsets, baseline model predictions and gradebooks
 - Code for Analysis:
     - `dataset_splitter.py`: generate subset
-    - `generate_gb_dist_accu.py`: 
+    - `analysis.py`: 
         -  generate gradebook, summary figures (accuracies), accuracy distributions
         -  visualize image and print question data (question text, ground truth answer, model predictions, model accuracy scores)
 
