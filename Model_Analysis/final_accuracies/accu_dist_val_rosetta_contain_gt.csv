@@ -1,6 +1,6 @@
-accuracy,accu_m4c,accu_tap,accu_lorra,accu_hotpot_without_mmt,accu_hotpot,accu_hotpot_without_object_label,accu_hotpot_lorra,accu_ocr,accu_q_vit,accu_vit,accu_ocr_q_vit_mask_0dot05,accu_question,accu_object,accu_ocr_q_vit_mask_0dot2,accu_q,accu_ocr_q,accu_ocr_q_vit,accu_modality_hotpot_run_val_bbox_only,accu_modality_hotpot_run_val,accu_modality_hotpot_run_val_mlm_bbox
-1.0,328,250,245,196,232,212,154,147,54,16,208,87,60,206,49,209,200,226,211,226
-0.9,17,29,13,17,23,23,4,16,3,2,13,6,4,19,4,19,22,23,25,21
-0.6,30,26,21,26,25,26,15,21,6,1,31,18,12,32,4,30,34,23,25,26
-0.3,59,48,49,44,48,58,40,45,13,9,46,40,32,45,16,46,47,46,61,49
-0.0,234,315,340,385,340,349,455,439,592,640,370,517,560,366,595,364,365,350,346,346
+accuracy,accu_m4c,accu_tap,accu_lorra,accu_hotpot_without_mmt,accu_hotpot,accu_hotpot_without_object_label,accu_hotpot_lorra,accu_ocr,accu_q_vit,accu_vit,accu_ocr_q_vit_mask_0dot05,accu_question,accu_object,accu_ocr_q_vit_mask_0dot2,accu_q,accu_ocr_q,accu_ocr_q_vit,accu_modality_hotpot_run_val_mlm_only,accu_modality_hotpot_run_val_mlm_bbox_100_1,accu_modality_hotpot_run_val_bbox_only,accu_modality_hotpot_run_val,accu_modality_hotpot_run_val_mlm_bbox
+1.0,328,250,245,196,232,212,154,147,54,16,208,87,60,206,49,209,200,226,217,226,211,226
+0.9,17,29,13,17,23,23,4,16,3,2,13,6,4,19,4,19,22,22,24,23,25,21
+0.6,30,26,21,26,25,26,15,21,6,1,31,18,12,32,4,30,34,23,23,23,25,26
+0.3,59,48,49,44,48,58,40,45,13,9,46,40,32,45,16,46,47,44,47,46,61,49
+0.0,234,315,340,385,340,349,455,439,592,640,370,517,560,366,595,364,365,353,357,350,346,346

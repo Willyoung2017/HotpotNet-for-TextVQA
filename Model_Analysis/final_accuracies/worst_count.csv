@@ -1,2 +1,2 @@
-lorra,hotpot_lorra,modality_hotpot_run_val,hotpot_without_mmt,m4c,modality_hotpot_run_val_mlm_bbox,hotpot,modality_hotpot_run_val_bbox_only,hotpot_without_object_label,tap
-156,136,49,22,22,10,9,8,6,6
+lorra,hotpot_lorra,modality_hotpot_run_val,m4c,hotpot_without_mmt,modality_hotpot_run_val_mlm_bbox_100_1,hotpot,modality_hotpot_run_val_bbox_only,modality_hotpot_run_val_mlm_bbox,hotpot_without_object_label,modality_hotpot_run_val_mlm_only,tap
+153,126,46,22,18,9,8,8,6,4,4,3
