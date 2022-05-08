@@ -1,4 +1,4 @@
-This folder contains code and quantitative results of models. 
+This folder contains code and results of qualitative and quantitative model analysis. 
 
 ## File Structure
 - `model_predictions`: finalized prediction results of unimodal baselines, competitive baselines, hotpot baselines and finalized hotpot models
@@ -15,23 +15,27 @@ This folder contains code and quantitative results of models.
 
 ## Pipeline and File Usage
 - Make sure your working directory is under `Model-Anlaysis/`
-- Put model prediction results under `model_predictions`
+- Put model prediction results under `model_predictions`.
 - To update quantitative results (gradebook, accuracies and accuracy distribution), execute the following command:
     
-    `python generate_gb_dist_accu.py --task update`
+    `python analysis.py --task update`
+    
+    if you want to exclude certain models from being considered in worst performing questions and challenging questions (but still want their accuracies), execute the following command:
+    
+    `python analysis.py --task update --update_leaveout_set <folder name under ./model_predictions>`
 
 - To visualize questions and select failure cases, execute the following commands:
     - To visualize one particular question, you need to specify the question id (e.g. 37886):  
 
-    `python generate_gb_dist_accu.py --task viz --viz_question_id 37886`
+    `python analysis.py --task viz --viz_question_id 37886`
     
     - To sequentially visualize all challenging questions:  
 
-    `python generate_gb_dist_accu.py --task viz --viz_data hard`
+    `python analysis.py --task viz --viz_data hard`
     
     - To sequentially visualize worst performing questions for a specific model, you need to specify the name of model as denoted in `.json` file (e.g. "hotpot-lorra"):  
 
-    `python generate_gb_dist_accu.py --task viz --viz_data worst --viz_worst_model hotpot-lorra`
+    `python analysis.py --task viz --viz_data worst --viz_worst_model hotpot-lorra`
     
     
 ---
