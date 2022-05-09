@@ -1,0 +1,6 @@
+accuracy,accu_tap,accu_hotpot,accu_ocr,accu_q_vit,accu_vit,accu_hotpot_without_mmt,accu_modality_hotpot_run_val_mlm_only,accu_modality_hotpot_run_val_mlm_bbox_100_1,accu_ocr_q_vit_mask_0dot05,accu_m4c,accu_question,accu_object,accu_ocr_q_vit_mask_0dot2,accu_q,accu_hotpot_without_object_label,accu_ocr_q,accu_ocr_q_vit,accu_hotpot_lorra,accu_lorra,accu_modality_hotpot_run_val_retrain,accu_modality_hotpot_run_val_bbox_only,accu_modality_hotpot_run_val_mlm_only_10000,accu_modality_hotpot_run_val_mlm_bbox
+1.0,91,87,25,64,43,77,86,80,76,80,69,33,69,67,83,87,83,78,72,89,83,88,84
+0.9,67,60,25,38,20,49,56,61,57,49,39,28,58,33,49,63,64,44,43,64,62,62,60
+0.6,26,22,12,29,24,21,17,24,23,26,22,17,21,28,23,31,25,36,35,28,19,18,18
+0.3,67,63,33,66,63,59,61,59,54,59,56,38,52,81,64,64,64,69,79,56,59,56,62
+0.0,235,254,391,289,336,280,266,262,276,272,300,370,286,277,267,241,250,259,257,249,263,262,262
