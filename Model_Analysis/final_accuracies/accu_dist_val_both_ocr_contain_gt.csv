@@ -1,6 +1,6 @@
-accuracy,accu_m4c,accu_tap,accu_lorra,accu_hotpot_without_mmt,accu_hotpot,accu_hotpot_without_object_label,accu_hotpot_lorra,accu_ocr,accu_q_vit,accu_vit,accu_ocr_q_vit_mask_0dot05,accu_question,accu_object,accu_ocr_q_vit_mask_0dot2,accu_q,accu_ocr_q,accu_ocr_q_vit,accu_modality_hotpot_run_val_mlm_only,accu_modality_hotpot_run_val_mlm_bbox_100_1,accu_modality_hotpot_run_val_bbox_only,accu_modality_hotpot_run_val,accu_modality_hotpot_run_val_mlm_bbox
-1.0,1021,1124,765,968,1042,1039,666,710,174,53,969,390,358,961,147,1005,998,1054,1023,1042,1022,1052
-0.9,52,75,41,49,63,64,29,46,11,3,48,25,24,63,8,66,60,62,60,66,60,61
-0.6,70,76,50,72,68,69,42,54,16,7,80,41,30,83,16,80,87,71,81,73,64,73
-0.3,113,110,98,113,116,107,82,121,29,27,97,81,71,113,33,102,97,97,111,108,121,112
-0.0,637,508,939,691,604,614,1074,962,1663,1803,699,1356,1410,673,1689,640,651,609,618,604,626,595
+accuracy,accu_tap,accu_hotpot,accu_ocr,accu_q_vit,accu_vit,accu_hotpot_without_mmt,accu_modality_hotpot_run_val_mlm_only,accu_modality_hotpot_run_val_mlm_bbox_100_1,accu_ocr_q_vit_mask_0dot05,accu_m4c,accu_question,accu_object,accu_ocr_q_vit_mask_0dot2,accu_q,accu_hotpot_without_object_label,accu_ocr_q,accu_ocr_q_vit,accu_hotpot_lorra,accu_lorra,accu_modality_hotpot_run_val_retrain,accu_modality_hotpot_run_val_bbox_only,accu_modality_hotpot_run_val_mlm_only_10000,accu_modality_hotpot_run_val_mlm_bbox
+1.0,1124,1042,710,174,53,968,1054,1023,969,1021,390,358,961,147,1039,1005,998,666,765,1054,1042,1049,1052
+0.9,75,63,46,11,3,49,62,60,48,52,25,24,63,8,64,66,60,29,41,62,66,68,61
+0.6,76,68,54,16,7,72,71,81,80,70,41,30,83,16,69,80,87,42,50,68,73,71,73
+0.3,110,116,121,29,27,113,97,111,97,113,81,71,113,33,107,102,97,82,98,110,108,108,112
+0.0,508,604,962,1663,1803,691,609,618,699,637,1356,1410,673,1689,614,640,651,1074,939,599,604,597,595
